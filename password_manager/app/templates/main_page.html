@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main_page.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Flash messages --> 
+    {% with messages = get_flashed_messages(with_categories=true) %} 
+        {% if messages %} 
+            <div id="flash-messages"> 
+                {% for category, message in messages %} 
+                    <div class="alert alert-{{ category | e }}"> 
+                        {{ message | e }} 
+                    </div> 
+                {% endfor %} 
+            </div> 
+        {% endif %} 
+    {% endwith %}
+    <div class="container">
+        <div class="user-info">
+            <p>Welcome, {{ username | e }}!</p>
+        </div>
+        <h1>Password Manager</h1>
+        <div class="main-options">
+            <a href="{{ url_for('password.add_password_route') }}" class="button">Add Password</a>
+            <a href="{{ url_for('password.retrieve_password_route') }}" class="button">Retrieve Password</a>
+            <a href="{{ url_for('password.delete_password_route') }}" class="button">Delete Password</a>
+        </div>
+        <div class="logout">
+            <a href="{{ url_for('auth.logout') }}" class="button">Logout</a>
+        </div>
+    </div>
+</body>
+</html>
