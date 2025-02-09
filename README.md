@@ -8,10 +8,10 @@ Additionally, setting up this project requires configuring Oracle Cloud security
 
 🌍 Project Architecture
 The password manager operates through a multi-layered cloud infrastructure, ensuring that all sensitive data is encrypted before being stored in the database. The master password itself is never stored, enhancing security and preventing unauthorized access.
-•	Oracle Cloud Load Balancer (Layer 4 & 7) for traffic distribution and security. Thanks to the load balancer being used on the client side, any hack attempt on the password manager would include Oracle in the scope, which acts as a strong deterrent. Additionally, Oracle handles maintenance, reducing the need for manual server management and minimizing configuration errors.
-•	Backend Virtual Machine (VM) running Dockerized Flask application.
-•	Oracle Autonomous Database (ATP) for secure credential storage.
-•	Secure API Communication with encrypted transactions, strong authentication, and strict access control.
+  •	Oracle Cloud Load Balancer (Layer 4 & 7) for traffic distribution and security. Thanks to the load balancer being used on the client side, any hack attempt on the password manager would include Oracle in the scope, which acts as a strong deterrent. Additionally, Oracle handles maintenance, reducing the need for manual server management and minimizing configuration errors.
+  •	Backend Virtual Machine (VM) running Dockerized Flask application.
+  •	Oracle Autonomous Database (ATP) for secure credential storage.
+  •	Secure API Communication with encrypted transactions, strong authentication, and strict access control.
 
 🛠️ Tech Stack
 Backend:
