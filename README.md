@@ -1,5 +1,3 @@
-# Password_Manager
-
 # Secure Password Manager - Cloud-Based Solution
 
 ## 🔐 About the Project
